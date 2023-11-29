@@ -7,6 +7,19 @@
     <title>Admin Dashboard - LivingLink</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="admin_dashboard.html">Admin Dashboard</a></li>
+            <li><a href="admin_staff_management.html">Admin/Staff Management</a></li>
+            <li><a href="finance_management.html">Finance Management</a></li>
+            <li><a href="property_management.html">Property Management</a></li>
+            <li><a href="room_management.html">Room Management</a></li>
+            <li><a href="tenant_management.html">Tenant Management</a></li>
+            <li><a href="water_electricity_management.html">Water and Electricity Management</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
     <header>
         <h1>Welcome, [Admin Name]!</h1>
     </header>
@@ -48,6 +61,13 @@
         </section>
     </main>
 
+    <script>
+        function logout() {
+            // Add logout logic here
+            alert("Logout functionality will be implemented here.");
+        }
+    </script>
+    
     <footer>
         <p>&copy; 2023 LivingLink - Property Management System</p>
     </footer>
