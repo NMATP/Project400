@@ -391,7 +391,7 @@ body {
 }
 
 nav {
-    background-color: #34db95;
+    background-color: rgb(16, 139, 72);
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -433,7 +433,7 @@ main {
 }
 
 footer {
-    background-color: #34db95;
+    background-color: rgb(16, 139, 72);
     color: white;
     text-align: center;
     padding: 10px;
