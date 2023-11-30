@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Admin Dashboard - LivingLink</title>
 </head>
 <body>
@@ -28,6 +29,7 @@
         <section class="dashboard-section">
             <h2>Financial Overview</h2>
             <!-- Include financial graphs here -->
+            <canvas id="financialChart" width="400" height="200"></canvas>
         </section>
 
         <section class="management-section">
@@ -67,6 +69,35 @@
             alert("Logout functionality will be implemented here.");
         }
     </script>
+        <script>
+            // Mock data for the chart
+            var chartData = {
+                labels: ["January", "February", "March", "April", "May", "June","july","August","Sep","Oct","Nov","Dec"],
+                datasets: [{
+                    label: "Monthly Revenue",
+                    data: [1200, 1500, 1800, 2000, 2200, 2500, 2800, 3000, 3200, 3500, 3000, 2500],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            };
+    
+            // Get the chart canvas element
+            var ctx = document.getElementById('financialChart').getContext('2d');
+    
+            // Create the chart
+            var financialChart = new Chart(ctx, {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
     
     <footer>
         <p>&copy; 2023 LivingLink - Property Management System</p>
