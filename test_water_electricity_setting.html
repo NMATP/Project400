@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Water and Electricity Meter Note</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="admin_dashboard.html">Admin Dashboard</a></li>
+            <li><a href="admin_staff_management.html">Admin/Staff Management</a></li>
+            <li><a href="finance_management.html">Finance Management</a></li>
+            <li><a href="property_management.html">Property Management</a></li>
+            <li><a href="room_management.html">Room Management</a></li>
+            <li><a href="tenant_management.html">Tenant Management</a></li>
+            <li><a href="water_electricity_management.html">Water and Electricity Management</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </nav>
+
+    <main>
+        <section class="management-section">
+            <h2>Water and Electricity Meter Note</h2>
+
+            <form id="meterNoteForm">
+                <label for="propertyName">Property Name:</label>
+                <select id="propertyName" name="propertyName">
+                    <!-- Populate this dropdown with property names from your database -->
+                    <option value="A1">A1</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="room">Room:</label>
+                <select id="room" name="room">
+                    <!-- Populate this dropdown with room numbers based on the selected property -->
+                    <option value="101">101</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <h3>Water Meter Note:</h3>
+                <label for="waterMeterPrevious">Water Meter Previous:</label>
+                <input type="number" id="waterMeterPrevious" name="waterMeterPrevious" required>
+
+                <label for="waterMeterThisTime">Water Meter This Time:</label>
+                <input type="number" id="waterMeterThisTime" name="waterMeterThisTime" required>
+
+                <h3>Electricity Meter Note:</h3>
+                <label for="electricityMeterPrevious">Electricity Meter Previous:</label>
+                <input type="number" id="electricityMeterPrevious" name="electricityMeterPrevious" required>
+
+                <label for="electricityMeterThisTime">Electricity Meter This Time:</label>
+                <input type="number" id="electricityMeterThisTime" name="electricityMeterThisTime" required>
+
+                <button type="submit">Submit Note</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 LivingLink - Property Management System</p>
+    </footer>
+
+    <script>
+        function logout() {
+            // Add logout logic here
+            alert("Logout functionality will be implemented here.");
+        }
+
+        // Add JavaScript for handling the form submission and saving the meter note to the database
+        document.getElementById('meterNoteForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Retrieve form data and send it to the server for processing
+            const formData = new FormData(this);
+
+            // Add logic to send the formData to the server using AJAX or fetch API
+            // Example:
+            // fetch('/save_meter_note', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     // Handle the response
+            //     console.log(data);
+            // })
+            // .catch(error => {
+            //     console.error('Error:', error);
+            // });
+        });
+    </script>
+</body>
+</html>
