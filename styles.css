@@ -339,6 +339,9 @@ footer {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin-right: auto; /* Auto margin on the right side to move the table to the left */
+    margin-left: auto; /* Auto margin on the left side for centering */
+
 }
 
 .data-table th,
