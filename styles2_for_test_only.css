@@ -1,0 +1,170 @@
+/* Reset some default styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.logout-btn {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Dashboard section styles */
+.dashboard-section, .management-section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Financial chart styles */
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Data table styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* ... (your existing styles) ... */
+
+/* Container styles */
+.container {
+    display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    height: 100vh;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+/* Adjust content to give space for the sidebar */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Navigation styles in the content area */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Responsive styles for small screens */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #333;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .sidebar a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Push content to the right when sidebar is shown */
+    .content.active {
+        margin-left: 250px;
+    }
+}
